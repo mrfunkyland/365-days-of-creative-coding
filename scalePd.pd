@@ -1,0 +1,15 @@
+#N canvas 161 243 470 320 10;
+#X obj 133 120 line~;
+#X msg 134 91 \$1 20;
+#X obj 131 65 linedrive \$1 \$2 \$3 \$4;
+#X obj 131 23 inlet;
+#X obj 135 159 outlet~;
+#X obj 245 164 outlet;
+#X obj 243 122 line;
+#X text 225 24 normal: 127 8 1.071 10;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 1 0 6 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 6 0 5 0;

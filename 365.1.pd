@@ -1,0 +1,102 @@
+#N canvas 314 146 731 383 10;
+#X obj 162 121 fm;
+#X obj 204 342 dac~;
+#X obj 228 299 *~;
+#X obj 26 97 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 29 237 / 127;
+#X obj 188 299 *~;
+#X floatatom 163 96 5 0 0 0 - - -;
+#X obj 24 -4 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 119 90 + 50;
+#X obj 244 242 vline~;
+#X msg 216 216 0 5 \, 1 20 5 \, 0.2 200 25 \, 0.1 100 225 \, 0 20 325
+;
+#X obj 228 269 *~;
+#X obj 188 269 *~;
+#X obj 119 66 random 30;
+#X obj 26 330 delwrite~ d1 500;
+#X obj 52 308 *~ 0.5;
+#X obj 319 308 *~ 0.5;
+#X obj 382 325 delwrite~ d2 500;
+#X obj 25 18 metro 400;
+#X obj 52 276 delread~ d1 240;
+#X obj 318 281 delread~ d2 240;
+#X obj 323 41 MouseState;
+#X obj 323 167 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X floatatom 339 148 5 0 0 0 - - -;
+#X floatatom 355 122 5 0 0 0 - - -;
+#X text 379 151 x;
+#X text 399 123 y;
+#X floatatom 371 98 5 0 0 0 - - -;
+#X text 421 99 delta x;
+#X floatatom 388 69 5 0 0 0 - - -;
+#X text 438 70 delta y;
+#X text 342 168 button pressed;
+#X msg 308 13 poll;
+#X msg 351 13 nopoll;
+#X obj 205 90 / 100;
+#X obj 408 144 / 3;
+#X obj 497 194 sel 0 1;
+#X msg 53 210 \; pd dsp \$1;
+#X obj 53 189 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 307 -10 loadbang;
+#X obj 496 221 t b b;
+#X obj 515 -9 cnv 15 200 20 empty empty 365.days.of.creative.coding
+5 12 1 16 -128992 -257985 0;
+#X obj 515 15 cnv 15 200 20 empty empty mrfunkyland 112 12 1 16 -128992
+-257985 0;
+#X obj 515 39 cnv 15 100 60 empty empty day 20 27 1 50 -128992 -260097
+0;
+#X obj 615 39 cnv 15 100 60 empty empty one 5 27 1 50 -128992 -257985
+0;
+#X obj 136 342 recorder~;
+#X obj 136 321 tgl 15 0 empty empty empty 17 7 0 10 -258113 -262144
+-1 0 1;
+#X connect 0 0 12 0;
+#X connect 0 1 11 0;
+#X connect 2 0 1 1;
+#X connect 2 0 45 2;
+#X connect 3 0 4 0;
+#X connect 4 0 2 1;
+#X connect 4 0 5 1;
+#X connect 5 0 1 0;
+#X connect 5 0 45 1;
+#X connect 6 0 0 0;
+#X connect 7 0 18 0;
+#X connect 8 0 6 0;
+#X connect 9 0 12 1;
+#X connect 9 0 11 1;
+#X connect 10 0 9 0;
+#X connect 11 0 2 0;
+#X connect 11 0 16 0;
+#X connect 12 0 5 0;
+#X connect 12 0 15 0;
+#X connect 13 0 8 0;
+#X connect 15 0 14 0;
+#X connect 16 0 17 0;
+#X connect 18 0 10 0;
+#X connect 18 0 13 0;
+#X connect 19 0 5 0;
+#X connect 19 0 15 0;
+#X connect 20 0 2 0;
+#X connect 20 0 16 0;
+#X connect 21 0 22 0;
+#X connect 21 1 23 0;
+#X connect 21 2 24 0;
+#X connect 21 3 27 0;
+#X connect 21 4 29 0;
+#X connect 22 0 36 0;
+#X connect 23 0 34 0;
+#X connect 24 0 35 0;
+#X connect 32 0 21 0;
+#X connect 33 0 21 0;
+#X connect 34 0 0 1;
+#X connect 35 0 0 2;
+#X connect 36 1 40 0;
+#X connect 38 0 37 0;
+#X connect 39 0 32 0;
+#X connect 46 0 45 0;
