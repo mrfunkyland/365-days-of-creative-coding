@@ -1,0 +1,64 @@
+#N canvas 748 169 639 482 10;
+#X obj 397 18 cnv 15 223 20 empty empty 365.days.of.creative.coding
+23 12 1 16 -128992 -257985 0;
+#X obj 397 42 cnv 15 223 20 empty empty mrfunkyland 131 12 1 16 -128992
+-257985 0;
+#X obj 397 66 cnv 15 124 60 empty empty day 3 27 1 50 -128992 -260097
+0;
+#X obj 521 66 cnv 15 100 60 empty empty twelve -40 27 1 50 -128992
+-257985 0;
+#X obj 128 388 *~;
+#X obj 121 417 dac~;
+#X obj 254 283 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8900 1;
+#X obj 254 422 / 127;
+#X obj 280 361 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 280 381 \; pd dsp \$1;
+#X obj 16 408 recorder~;
+#X obj 150 129 decimate~ 0.5 16;
+#X floatatom 204 109 5 0 1 2 ratio[0-1] - -;
+#X floatatom 281 115 5 1 32 2 bits[1-32] - -;
+#X obj 102 187 *~;
+#X obj 172 187 *~;
+#X msg 206 161 0;
+#X msg 206 181 1;
+#X msg 136 161 0;
+#X msg 221 58 0.03;
+#X msg 290 75 8;
+#X obj 117 36 noise~;
+#X obj 118 79 bp~ 523 100;
+#X msg 247 177 0.5;
+#X obj 132 252 *~;
+#X obj 298 201 vline~;
+#X msg 302 168 0 5 \, 0.6 3000;
+#X msg 369 208 0 3000;
+#X msg 136 181 2;
+#X text 303 416 maybe use waves patch;
+#X text 303 436 to control gain;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 4 0 10 1;
+#X connect 4 0 10 2;
+#X connect 6 0 7 0;
+#X connect 7 0 4 1;
+#X connect 8 0 9 0;
+#X connect 11 0 15 0;
+#X connect 12 0 11 1;
+#X connect 13 0 11 2;
+#X connect 14 0 24 0;
+#X connect 15 0 24 0;
+#X connect 16 0 15 1;
+#X connect 17 0 15 1;
+#X connect 18 0 14 1;
+#X connect 19 0 12 0;
+#X connect 20 0 13 0;
+#X connect 21 0 22 0;
+#X connect 22 0 14 0;
+#X connect 22 0 11 0;
+#X connect 23 0 15 1;
+#X connect 24 0 4 0;
+#X connect 25 0 24 1;
+#X connect 26 0 25 0;
+#X connect 27 0 25 0;
+#X connect 28 0 14 1;
